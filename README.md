@@ -3,15 +3,6 @@
 React + Vite single-page site with light and dark themes, deployed to GitHub Pages.
 All content is in `src/data/`. All colours are in `src/styles/tokens.css`.
 
-## Run locally
-
-```bash
-npm install
-npm run dev            # http://localhost:5173
-npm run build          # production build in dist/
-npm run preview        # serve the build
-npm run check:contrast # WCAG AA check for both themes
-```
 
 Requires Node 20 or newer (tested on Node 22).
 
@@ -45,20 +36,3 @@ A tiny inline script in `index.html` sets the theme before first paint. If you c
 `--color-bg` in either theme, update the two matching hex values in that script as well.
 The toggle offers Light, Dark and System; the choice is stored in `localStorage` (key `theme`).
 
-## Deploy to GitHub Pages
-
-```bash
-git init
-git add .
-git commit -m "Initial commit: portfolio"
-git branch -M main
-git remote add origin https://github.com/darni3l/portfolio.git
-git push -u origin main
-```
-
-Then on GitHub: **Settings, Pages, Source: GitHub Actions**. Every push to `main` builds and deploys.
-
-- The workflow sets the base path from the repository name automatically
-  (`/<repo>/` for project sites, `/` for a repository named `<user>.github.io`).
-- To build manually for a project site: `VITE_BASE_PATH=/portfolio/ VITE_SITE_URL=https://darni3l.github.io/portfolio/ npm run build`.
-- Using a custom domain: set `VITE_BASE_PATH=/` and `VITE_SITE_URL` to your domain in the workflow.
