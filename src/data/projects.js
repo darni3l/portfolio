@@ -41,7 +41,7 @@ export const projects = [
     notes: [
       {
         label: 'Status',
-        text: 'Chimera phenotypes are being read out in November 2026, so no results are reported here.',
+        text: 'Chimera phenotypes are being read out in November 2026.',
       },
       {
         label: 'Limits',
@@ -51,10 +51,10 @@ export const projects = [
     ],
     noLinksNote: 'No public repository for this project.',
     figure: {
-      src: null,
+      src: 'public/images/projects/case-01.png',
       darkSrc: null,
-      alt: '',
-      caption: '',
+      alt: 'AlphaFold 3 predicted PHY1 protein structure visualized in PyMOL and colored according to per-residue pLDDT confidence scores.',
+      caption: 'AlphaFold 3 prediction of Phytochrome 1 (PHY1)',
       width: 1600,
       height: 900,
       expected: 'public/images/projects/case-01.png',
@@ -93,10 +93,10 @@ export const projects = [
     ],
     links: [{ label: 'Repository', href: 'https://github.com/darni3l/brd4-md-simulation' }],
     figure: {
-      src: null,
+      src: 'public/images/projects/case-02.png',
       darkSrc: null,
-      alt: '',
-      caption: '',
+      alt: 'VMD visualization of mutated and wildtype BRD4 protein bound to a receptor. Conformational change in mutated protein shown by orange arrow(right)',
+      caption: 'Visible BRD4 conformational change visualized by VMD',
       width: 1600,
       height: 900,
       expected: 'public/images/projects/case-02.png',
@@ -138,10 +138,10 @@ export const projects = [
     ],
     links: [{ label: 'Repository', href: 'https://github.com/darni3l/nylc-docking' }],
     figure: {
-      src: null,
+      src: 'public/images/projects/case-03.png',
       darkSrc: null,
-      alt: '',
-      caption: '',
+      alt: 'Best AutoDockVina docking poses for monomer and tetramer form of NYLC. Catalytic distances measured with PyMol are visible in black',
+      caption: 'Comparison of monomer and tetramer: best poses and catalytic distances',
       width: 1600,
       height: 900,
       expected: 'public/images/projects/case-03.png',
