@@ -6,7 +6,7 @@ All content is in `src/data/`. All colours are in `src/styles/tokens.css`.
 
 Requires Node 20 or newer (tested on Node 22).
 
-## Edit content (no component code needed)
+## Edit content 
 
 | To change | Edit |
 | --- | --- |
@@ -19,15 +19,6 @@ Requires Node 20 or newer (tested on Node 22).
 | Section titles and nav labels | `src/data/site.js` |
 | Palette, type scale, spacing | `src/styles/tokens.css` |
 | Page title, SEO description, social card tags | `index.html` |
-
-## Assets to add
-
-| File | Notes |
-| --- | --- |
-| `public/assets/cv.pdf` | Currently a **placeholder PDF**. Replace it, keep the name. |
-| `public/images/projects/case-01.png` (`-02`, `-03`) | 1600 x 900 px, PNG or SVG. Then set `src`, `alt` and optional `darkSrc` in `projects.js`. Until then a labelled placeholder is shown. |
-| `public/images/og-card.png` | 1200 x 630 px social preview. A text-only one is included. |
-| `public/images/profile.jpg` (optional) | Then set `photo` in `profile.js`. |
 
 ## Theme
 
