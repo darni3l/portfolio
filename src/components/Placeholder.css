@@ -1,0 +1,23 @@
+.placeholder {
+  border: 2px dashed var(--color-border-strong);
+  border-radius: var(--radius-sm);
+  background: var(--color-surface-sunken);
+  color: var(--color-text-muted);
+}
+
+.placeholder--text { padding: 0.9rem 1.1rem; font-size: var(--step--1); }
+.placeholder--text strong { color: var(--color-accent); }
+
+.placeholder--image {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
+  padding: 1.25rem;
+  text-align: center;
+}
+.placeholder--image p { margin: 0; }
+.placeholder__tag { color: var(--color-accent); font-weight: 600; font-size: var(--step--1); }
+.placeholder__path { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 0.8125rem; color: var(--color-text); word-break: break-all; }
+.placeholder__spec { font-size: 0.8125rem; max-width: 34ch; }

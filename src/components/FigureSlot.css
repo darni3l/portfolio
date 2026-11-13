@@ -1,0 +1,27 @@
+.figure { margin: 0; }
+
+.figure__plate {
+  padding: 0.75rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background: var(--color-surface-sunken);
+}
+
+.figure__img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  filter: var(--image-filter);
+}
+
+/* Dedicated dark variant: swap images, no dimming. */
+.figure__img--for-dark { display: none; filter: none; }
+[data-theme="dark"] .figure__img--for-light { display: none; }
+[data-theme="dark"] .figure__img--for-dark { display: block; }
+
+.figure__caption {
+  margin-top: var(--space-2);
+  color: var(--color-text-muted);
+  font-size: var(--step--1);
+}

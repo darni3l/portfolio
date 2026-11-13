@@ -1,0 +1,12 @@
+.card {
+  padding: var(--space-card);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+}
+
+.card--inverse {
+  background: var(--color-inverse-bg);
+  border-color: var(--color-inverse-bg);
+  color: var(--color-inverse-text);
+}

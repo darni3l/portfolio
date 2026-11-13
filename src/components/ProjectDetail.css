@@ -1,0 +1,44 @@
+.detail > * + * { margin-top: var(--space-5); }
+
+.detail__lead { max-width: 60ch; margin-bottom: 0; font-size: var(--step-1); }
+
+.detail__heading {
+  margin-bottom: var(--space-3);
+  font-family: var(--font-body);
+  font-size: var(--step--1);
+  font-weight: 600;
+  color: var(--color-text-muted);
+}
+
+.steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 13rem), 1fr));
+  gap: var(--space-4);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.steps__item {
+  padding: var(--space-4);
+  border-radius: var(--radius-sm);
+  background: var(--color-surface-sunken);
+}
+.steps__label { margin: 0 0 0.25rem; color: var(--color-accent); font-weight: 600; font-size: var(--step--1); }
+.steps__text { margin: 0; font-size: var(--step--1); line-height: 1.55; }
+
+.note { max-width: 66ch; margin-bottom: 0; font-size: var(--step--1); line-height: 1.6; }
+.detail > .note + .note { margin-top: var(--space-3); }
+
+/* Limits are the point of this portfolio, so they get the one visual emphasis. */
+.note--limits {
+  padding: 0.75rem 1rem;
+  border-left: 3px solid var(--color-accent);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  background: var(--color-surface-sunken);
+}
+
+.detail__muted { margin: 0; color: var(--color-text-muted); font-size: var(--step--1); }
+
+.detail__link-list { display: flex; flex-wrap: wrap; gap: var(--space-4); margin: 0; padding: 0; list-style: none; font-size: var(--step--1); font-weight: 600; }
+.detail__link-list a { display: inline-flex; align-items: center; gap: 0.35rem; }
+.detail__ext { flex: none; }

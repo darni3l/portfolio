@@ -1,0 +1,103 @@
+/* ==========================================================================
+   Design tokens: the ONLY place colours are defined.
+   Palette is taken from the original portfolio (paper #F6F5F1, ink #16181D,
+   teal #0F6B63, tint #CFE8E4, border #DAD7CE). Dark values reuse the same
+   family (ink as background, paper as text, the original on-dark mint #8FD5CB).
+   Run `npm run check:contrast` after editing any colour.
+   ========================================================================== */
+
+:root {
+  color-scheme: light;
+
+  /* ---- Typefaces (same pairing as the original) ---- */
+  --font-display: "Fraunces", Georgia, "Times New Roman", serif;
+  --font-body: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+
+  /* ---- Type scale ---- */
+  --step--1: 0.875rem;
+  --step-0: 1rem;
+  --step-1: 1.125rem;
+  --step-2: clamp(1.25rem, 1.1rem + 0.6vw, 1.5rem);
+  --step-3: clamp(1.75rem, 1.4rem + 1.4vw, 2.25rem);
+  --step-positioning: clamp(1.375rem, 1.1rem + 1.1vw, 1.75rem);
+  --step-display: clamp(2.75rem, 1.5rem + 5.2vw, 4.75rem);
+  --step-metric: clamp(1.5rem, 1.3rem + 0.8vw, 1.875rem);
+
+  /* ---- Spacing ---- */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-section: clamp(3rem, 2rem + 4vw, 4.5rem);
+  --space-card: clamp(1.25rem, 1rem + 1vw, 1.75rem);
+  --gutter: clamp(1rem, 0.5rem + 2.5vw, 2rem);
+
+  /* ---- Layout ---- */
+  --container: 70rem;
+  --measure: 46rem;
+  --nav-h: 6.5rem;
+
+  /* ---- Shape and motion ---- */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-pill: 999px;
+  --dur-fast: 0.15s;
+  --dur-med: 0.25s;
+  --focus-ring: 3px solid var(--color-focus);
+
+  /* ---- Colour: light ---- */
+  --color-bg: #f6f5f1;
+  --color-surface: #ffffff;
+  --color-surface-sunken: #f6f5f1;
+  --color-text: #16181d;
+  --color-text-muted: #4a4f57;
+  --color-accent: #0f6b63;
+  --color-accent-hover: #0a4d47;
+  --color-on-accent: #ffffff;
+  --color-focus: #0f6b63;
+  --color-border: #dad7ce;
+  --color-border-strong: #cfcbc0;
+  --color-tint: #cfe8e4;
+  --color-on-tint: #16181d;
+  --color-inverse-bg: #16181d;
+  --color-inverse-text: #f6f5f1;
+  --color-inverse-muted: #d9d6cc;
+  --color-inverse-accent: #8fd5cb;
+  --color-overlay: rgb(22 24 29 / 0.55);
+  --shadow-modal: 0 24px 64px -24px rgb(22 24 29 / 0.45);
+  --image-filter: none;
+}
+
+@media (min-width: 48em) {
+  :root {
+    --nav-h: 4.5rem;
+  }
+}
+
+[data-theme="dark"] {
+  color-scheme: dark;
+
+  --color-bg: #16181d;
+  --color-surface: #1e2127;
+  --color-surface-sunken: #16181d;
+  --color-text: #f6f5f1;
+  --color-text-muted: #c9c6bc;
+  --color-accent: #8fd5cb;
+  --color-accent-hover: #b4e4dd;
+  --color-on-accent: #16181d;
+  --color-focus: #8fd5cb;
+  --color-border: #2e333b;
+  --color-border-strong: #454b55;
+  --color-tint: #123f3a;
+  --color-on-tint: #f6f5f1;
+  --color-inverse-bg: #0a4d47;
+  --color-inverse-text: #f6f5f1;
+  --color-inverse-muted: #d9d6cc;
+  --color-inverse-accent: #8fd5cb;
+  --color-overlay: rgb(0 0 0 / 0.7);
+  --shadow-modal: 0 24px 64px -24px rgb(0 0 0 / 0.8);
+  --image-filter: brightness(0.9);
+}

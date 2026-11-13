@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Daniel Ogundero — Portfolio</title>
+    <meta
+      name="description"
+      content="Biotechnology engineering student. Biology, read through computation: bench work paired with structural modelling, with every claim labelled by evidence level and limits."
+    />
+
+    <meta name="color-scheme" content="light dark" />
+    <!-- Pre-paint theme: keep the two hex values in sync with --color-bg in src/styles/tokens.css -->
+    <meta name="theme-color" content="#F6F5F1" />
+    <script>
+      (function () {
+        try {
+          var stored = null;
+          try { stored = localStorage.getItem('theme'); } catch (e) {}
+          var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+          var theme = stored === 'light' || stored === 'dark' ? stored : prefersDark ? 'dark' : 'light';
+          var root = document.documentElement;
+          root.setAttribute('data-theme', theme);
+          root.style.colorScheme = theme;
+          var meta = document.querySelector('meta[name="theme-color"]');
+          if (meta) meta.setAttribute('content', theme === 'dark' ? '#16181D' : '#F6F5F1');
+        } catch (e) {}
+      })();
+    </script>
+
+    <link rel="icon" href="%BASE_URL%favicon.svg" type="image/svg+xml" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Daniel Ogundero — Portfolio" />
+    <meta property="og:description" content="Biology, read through computation. Biotechnology engineering student." />
+    <meta property="og:url" content="%SITE_URL%" />
+    <meta property="og:image" content="%SITE_URL%images/og-card.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Daniel Ogundero. Biology, read through computation." />
+    <meta name="twitter:card" content="summary_large_image" />
+  </head>
+  <body>
+    <div id="root"></div>
+    <noscript>This portfolio needs JavaScript to run.</noscript>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

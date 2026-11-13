@@ -1,0 +1,11 @@
+.meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.125rem 1rem;
+  margin: 0 0 var(--space-3);
+  padding: 0;
+  list-style: none;
+  color: var(--color-text-muted);
+  font-size: var(--step--1);
+}
+.meta li:first-child { color: var(--color-accent); font-weight: 600; }
