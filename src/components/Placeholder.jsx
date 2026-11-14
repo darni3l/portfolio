@@ -21,6 +21,9 @@ export function ImagePlaceholder({ path, size, ratio = '16 / 9' }) {
       <p className="placeholder__tag">Placeholder: figure or screenshot</p>
       <p className="placeholder__path">{path}</p>
       <p className="placeholder__spec">
+        Then set <code>src: &apos;{path.replace(/^public\//, "")}&apos;</code> in src/data/projects.js
+      </p>
+      <p className="placeholder__spec">
         Recommended {size}. Use PNG or SVG with a transparent background so it works in light and
         dark themes.
       </p>

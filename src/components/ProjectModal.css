@@ -62,3 +62,6 @@
   overflow-y: auto;
   overscroll-behavior: contain;
 }
+
+/* The scroll area is focusable so keyboard users can scroll dialogs with no links inside. */
+.modal__body:focus-visible { outline-offset: -3px; }

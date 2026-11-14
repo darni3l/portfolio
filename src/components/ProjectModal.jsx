@@ -46,7 +46,7 @@ export default function ProjectModal({ project, onClose }) {
               <Icon name="close" size={20} />
             </button>
           </header>
-          <div className="modal__body">
+          <div className="modal__body" tabIndex={0}>
             <ProjectDetail project={project} />
           </div>
         </div>
