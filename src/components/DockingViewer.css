@@ -1,0 +1,71 @@
+/* Colors follow the surrounding text color, so they work in light and dark mode without site tokens.
+   Optionally set --accent and --on-accent in tokens.css to match your accent. */
+.docking {
+  --dv-fg: currentColor;
+  --dv-muted: color-mix(in srgb, currentColor 72%, transparent);
+  --dv-line: color-mix(in srgb, currentColor 28%, transparent);
+  --dv-surface: color-mix(in srgb, currentColor 6%, transparent);
+  --dv-accent: var(--accent, #1f6f6b);
+  --dv-on-accent: var(--on-accent, #ffffff);
+  display: grid;
+  gap: 1rem;
+  color: var(--dv-fg);
+}
+
+.docking__head h3 { margin: 0 0 0.35rem; font-size: 1.25rem; }
+.docking__head p { margin: 0; max-width: 65ch; line-height: 1.55; color: var(--dv-muted); }
+
+.docking__bar { display: flex; flex-wrap: wrap; gap: 0.75rem; justify-content: space-between; }
+.docking__group { display: inline-flex; border: 1px solid var(--dv-line); border-radius: 8px; overflow: hidden; }
+.docking__btn {
+  font: inherit;
+  font-size: 0.9rem;
+  padding: 0.5rem 0.9rem;
+  color: var(--dv-fg);
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+}
+.docking__btn + .docking__btn { border-left: 1px solid var(--dv-line); }
+.docking__btn[aria-pressed='true'] { background: var(--dv-accent); color: var(--dv-on-accent); }
+.docking__btn:focus-visible { outline: 2px solid var(--dv-accent); outline-offset: -2px; }
+
+.docking__stage {
+  position: relative;
+  height: clamp(320px, 55vh, 520px);
+  overflow: hidden;
+  background: var(--dv-surface);
+  border: 1px solid var(--dv-line);
+  border-radius: 12px;
+}
+.docking__canvas { position: absolute; inset: 0; }
+.docking__status {
+  position: absolute;
+  inset: auto 1rem 1rem;
+  margin: 0;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.9rem;
+  text-align: center;
+  color: var(--dv-fg);
+  background: var(--dv-surface);
+  border: 1px solid var(--dv-line);
+  border-radius: 8px;
+}
+.docking__hint { margin: -0.5rem 0 0; font-size: 0.85rem; color: var(--dv-muted); }
+
+.docking__legend { display: flex; flex-wrap: wrap; gap: 1rem; margin: 0; padding: 0; list-style: none; font-size: 0.9rem; }
+.docking__legend li { display: inline-flex; align-items: center; gap: 0.4rem; }
+.docking__swatch { width: 0.85rem; height: 0.85rem; border-radius: 50%; border: 1px solid var(--dv-line); }
+
+.docking__facts { display: grid; gap: 0.5rem; margin: 0; }
+.docking__facts div { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+.docking__facts dt { color: var(--dv-muted); }
+.docking__facts dd { margin: 0; font-weight: 600; }
+
+.docking__limits { padding: 1rem 1.25rem; border-left: 3px solid var(--dv-accent); background: var(--dv-surface); border-radius: 0 8px 8px 0; }
+.docking__limits h4 { margin: 0 0 0.5rem; font-size: 1rem; }
+.docking__limits ul { margin: 0; padding-left: 1.1rem; max-width: 70ch; line-height: 1.55; color: var(--dv-muted); }
+
+.docking--compact .docking__stage { height: clamp(280px, 45vh, 400px); }
+.docking__fallback { display: grid; gap: 0.75rem; }
+.docking__fallback > p { margin: 0; padding: 0.5rem 0.75rem; font-size: 0.9rem; background: var(--dv-surface); border: 1px solid var(--dv-line); border-radius: 8px; }

@@ -106,6 +106,7 @@ export const projects = [
   {
     id: 'nylc',
     caseLabel: 'Case 03',
+    viewer: 'docking',
     kind: 'Docking',
     context: 'With Dirk Wacker, completed September 2026',
     title: 'NylC: does docking hint at a difference between monomer and tetramer?',

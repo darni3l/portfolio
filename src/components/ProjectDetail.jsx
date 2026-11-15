@@ -6,6 +6,7 @@ import Rich from './Rich.jsx'
 import Tag from './Tag.jsx'
 import Icon from './Icon.jsx'
 import './ProjectDetail.css'
+import DockingViewer from './DockingViewer.jsx'
 
 // Detail view body. Renders only the fields a project actually provides.
 export default function ProjectDetail({ project }) {
@@ -65,7 +66,11 @@ export default function ProjectDetail({ project }) {
         </p>
       ))}
 
+      {project.viewer === 'docking' ? (
+        <DockingViewer compact fallback={<FigureSlot figure={figure} />} />
+      ) : (
       <FigureSlot figure={figure} />
+      )}
 
       <div className="detail__links">
         {links?.length > 0 ? (
